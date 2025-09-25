@@ -4,15 +4,21 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home.tsx";
 import RoomDetails from "./pages/RoomDetails.tsx";
+import AppLayout from "./App.tsx";
 
 const router = createBrowserRouter([
    {
-      path: "/",
-      Component: Home,
-   },
-   {
-      path: "/rooms/:roomId",
-      Component: RoomDetails,
+      element: <AppLayout />,
+      children: [
+         {
+            path: "/",
+            Component: Home,
+         },
+         {
+            path: "/rooms/:roomId",
+            Component: RoomDetails,
+         },
+      ],
    },
 ]);
 
