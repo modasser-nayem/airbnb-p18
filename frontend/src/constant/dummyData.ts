@@ -160,3 +160,73 @@ export const roomsItem = [
       avgRating: 4.8,
    },
 ];
+
+export const reviewsData = [
+   {
+      id: "1",
+      name: "Julia",
+      designation: "11 years on Airbnb",
+      avatar:
+         "https://a0.muscache.com/im/pictures/user/3db215a1-d6ca-4f6c-b30d-3736e3b1ebfb.jpg?im_w=240",
+      rating: 4,
+      comment:
+         "Stone’s throw away from BTS, 7-11, after you and 1-2 stations away from shopping district (quite walkable really) Studio was clean, spacious and bright but the only downside was the ants in the kitchen and the stairs leading to the place. You have to be careful cause the steps are quite narrow.  I had a good rest and stay! Will recommend",
+      createAt: "1 week ago",
+   },
+   {
+      id: "2",
+      name: "Ezza",
+      designation: "Dubai, United Arab Emirates",
+      avatar:
+         "https://a0.muscache.com/im/pictures/user/97234832-7546-4baa-86cc-11e46de3f130.jpg?im_w=240",
+      rating: 4,
+      comment:
+         "Great place to stay for a short trip in Bangkok. The location is excellent with nice restaurants nearby, making it very convenient. My only concern was the ...",
+      createAt: "2 week ago",
+   },
+   {
+      id: "3",
+      name: "Remi",
+      designation: "10 years on Airbnb",
+      avatar:
+         "https://a0.muscache.com/im/pictures/user/User/original/7d1573b5-ac5c-4fdc-b192-c1327ffdc716.jpeg?im_w=240",
+      rating: 4,
+      comment:
+         "Pridi and June have done such an incredible job with this apartment. The location was so accessible and easy to get to straight from the airport on the train line. The apartment it self was pristine and styled so incredibly well! Overall my partner and i had such an amazing time. Will definitely be staying again once we’re back in BKK.",
+      createAt: "July 2025",
+   },
+
+   {
+      id: "4",
+      name: "Darryl",
+      designation: "9 years on Airbnb",
+      avatar:
+         "https://a0.muscache.com/im/pictures/user/User/original/ba17873c-3e82-4331-a84b-a1a455444c60.jpeg?im_w=240",
+      rating: 4,
+      comment:
+         "Clean, the room is very beautiful, my son is 5 years very loved this. Check-in is convenient. Fully equipped with all amenities. Other rooms I looked at nearby I could tell right away they belong to this same host because of the decor. It’s clear they enjoy creating and using the space. It made me happy to stay here",
+      createAt: "3 week ago",
+   },
+   {
+      id: "5",
+      name: "Anita Putri",
+      designation: "5 years on Airbnb",
+      avatar:
+         "https://a0.muscache.com/im/pictures/user/User/original/3d8acbe2-3810-4ebc-970f-0c68be5cb69e.jpeg?im_w=240",
+      rating: 4,
+      comment:
+         "Such a comfy place with great hospitality! ✨ The host was very responsive and helpful whenever we had any issues. The area is super walkable, with easy access to cafes, shops, and the BTS station. Definitely recommended if you’re looking for a cozy stay in Bangkok. 💯",
+      createAt: "July 2025",
+   },
+   {
+      id: "6",
+      name: "Kabira",
+      designation: "12 years on Airbnb",
+      avatar:
+         "https://a0.muscache.com/im/pictures/user/9bcb8403-9325-492f-aee0-588e418874f2.jpg?im_w=240",
+      rating: 4,
+      comment:
+         "My stay here for 4D3N has been amazing! Pridi and June has been very responsive and helpful! The location is extremely convenient to Phaya Thai BTS! Space is clean, good air-con and spacious! Highly recommended & value for money!",
+      createAt: "3 week ago",
+   },
+];
