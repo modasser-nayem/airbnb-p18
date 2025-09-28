@@ -1,6 +1,4 @@
-import { Link } from "react-router";
 import Navbar from "../components/shared/Navbar";
-import Footer from "../components/shared/Footer";
 import RoomsSlider from "../components/RoomsSlider";
 import { roomsItem } from "../constant/dummyData";
 
@@ -35,18 +33,11 @@ const Home = () => {
          {/* Navbar */}
          <Navbar />
 
-         <div className="container min-h-[100px] flex items-center justify-center">
-            <div className="text-center">
-               <h2 className="text-2xl font-semibold">
-                  Welcome to <span className="text-primary">Airbnb</span>
-               </h2>
-               <Link
-                  className=""
-                  to="/rooms/500"
-               >
-                  Details
-               </Link>
-            </div>
+         <div className="pt-5 text-center">
+            <h2 className="text-3xl font-semibold">
+               Welcome to <span className="text-primary">Airbnb</span>
+            </h2>
+            <p className="text-lg font-medium">Explore your Destination</p>
          </div>
 
          <div className="container py-14">
@@ -71,8 +62,6 @@ const Home = () => {
                title="Available next month in Kuala Lumpur"
             />
          </div>
-
-         <Footer />
       </div>
    );
 };

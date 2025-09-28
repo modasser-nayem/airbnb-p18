@@ -4,6 +4,9 @@ import { LuDot, LuGrip } from "react-icons/lu";
 import WheatLeftIcon from "../ui/WheatLeftIcon";
 import WheatRightIcon from "../ui/WheatRightIcon";
 import { FaStar } from "react-icons/fa";
+import { MdOutlineCalendarMonth, MdOutlinePool } from "react-icons/md";
+import { CiDumbbell } from "react-icons/ci";
+import OfferOfThisPlace from "./OfferOfThisPlace";
 
 const DetailsHeader = () => {
    return (
@@ -69,66 +72,120 @@ const DetailsHeader = () => {
          </div>
 
          <div className="flex gap-10">
-            <div className="h-screen flex-1">
-               <div>
+            <div className="flex-1">
+               <div className="max-w-3xl">
                   <div>
-                     <h2 className="text-2xl font-semibold">
-                        Entire serviced apartment in Dhaka, Bangladesh
-                     </h2>
-                     <div className="flex items-center gap-0.5 font-medium">
-                        <p>4 guests</p>
-                        <p className="flex items-center">
-                           <span>
-                              <LuDot />
-                           </span>{" "}
-                           2 bedrooms
-                        </p>
-                        <p className="flex items-center">
-                           <span>
-                              <LuDot />
-                           </span>{" "}
-                           2 beds
-                        </p>
-                        <p className="flex items-center">
-                           <span>
-                              <LuDot />
-                           </span>{" "}
-                           2 baths
-                        </p>
+                     <div>
+                        <h2 className="text-2xl font-semibold">
+                           Entire serviced apartment in Dhaka, Bangladesh
+                        </h2>
+                        <div className="flex items-center gap-0.5 font-medium">
+                           <p>4 guests</p>
+                           <p className="flex items-center">
+                              <span>
+                                 <LuDot />
+                              </span>{" "}
+                              2 bedrooms
+                           </p>
+                           <p className="flex items-center">
+                              <span>
+                                 <LuDot />
+                              </span>{" "}
+                              2 beds
+                           </p>
+                           <p className="flex items-center">
+                              <span>
+                                 <LuDot />
+                              </span>{" "}
+                              2 baths
+                           </p>
+                        </div>
                      </div>
                   </div>
-               </div>
 
-               <div className="mt-8 max-w-2xl font-semibold text-lg flex items-center justify-between border border-gray-300 px-8 py-6 rounded-2xl">
-                  <div className="flex items-center gap-1.5">
-                     <WheatLeftIcon />
+                  <div className="mt-8 max-w-2xl font-semibold text-lg flex items-center justify-between border border-gray-300 px-8 py-6 rounded-2xl">
+                     <div className="flex items-center gap-1.5">
+                        <WheatLeftIcon />
+                        <div className="text-center">
+                           <span className="block leading-1">Guest</span>{" "}
+                           <span className="block">favorite</span>
+                        </div>
+                        <WheatRightIcon />
+                     </div>
+
+                     <div className="bg-gray-300 w-[2px] min-h-[32px]"></div>
+
                      <div className="text-center">
-                        <span className="block leading-1">Guest</span>{" "}
-                        <span className="block">favorite</span>
+                        <p>4.9</p>
+                        <p className="flex items-center gap-0.5">
+                           {[1, 2, 3, 4, 5].map((i) => (
+                              <FaStar
+                                 size={10}
+                                 key={i}
+                              />
+                           ))}
+                        </p>
                      </div>
-                     <WheatRightIcon />
+
+                     <div className="bg-gray-300 w-[2px] min-h-[32px]"></div>
+
+                     <div className="text-center">
+                        <p>49</p>
+                        <p className="leading-1.5 text-sm">Reviews</p>
+                     </div>
                   </div>
 
-                  <div className="bg-gray-300 w-[2px] min-h-[32px]"></div>
-
-                  <div className="text-center">
-                     <p>4.9</p>
-                     <p className="flex items-center gap-0.5">
-                        {[1, 2, 3, 4, 5].map((i) => (
-                           <FaStar
-                              size={10}
-                              key={i}
-                           />
-                        ))}
-                     </p>
+                  {/* ==== */}
+                  <div className="my-10">
+                     <div className="flex items-center gap-4">
+                        <img
+                           className="w-[50px] h-[50px] rounded-full"
+                           src="https://a0.muscache.com/im/pictures/user/User-576146255/original/e1a90c6e-a045-4f5f-9006-6e6f63567155.jpeg?im_w=240"
+                           alt="user"
+                        />
+                        <div>
+                           <p className="font-semibold">
+                              Superhost1 year hosting
+                           </p>
+                           <p className="text-sm">Superhost1 year hosting</p>
+                        </div>
+                     </div>
+                     <div className="mt-10 py-4 ps-2 border-y border-gray-400 flex flex-col gap-3">
+                        <div className="flex items-center gap-4">
+                           <MdOutlinePool size={24} />
+                           <div>
+                              <p className="font-semibold">Dive right in</p>
+                              <p className="text-sm">
+                                 This is one of the few places in the area with
+                                 a pool.
+                              </p>
+                           </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                           <CiDumbbell size={24} />
+                           <div>
+                              <p className="font-semibold">At-home gym</p>
+                              <p className="text-sm">
+                                 The treadmill and yoga mat are ready for
+                                 workouts.
+                              </p>
+                           </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                           <MdOutlineCalendarMonth size={24} />
+                           <div>
+                              <p className="font-semibold">
+                                 Free cancellation before Oct 26
+                              </p>
+                              <p className="text-sm">
+                                 Get a full refund if you change your mind.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
                   </div>
 
-                  <div className="bg-gray-300 w-[2px] min-h-[32px]"></div>
-
-                  <div className="text-center">
-                     <p>49</p>
-                     <p className="leading-1.5 text-sm">Reviews</p>
-                  </div>
+                  <OfferOfThisPlace />
                </div>
             </div>
 
@@ -136,7 +193,9 @@ const DetailsHeader = () => {
             <div className="sm:relative">
                <div className="z-40 fixed left-1 bottom-1 sm:sticky sm:top-28 w-full sm:min-w-[350px] bg-white border border-gray-300 rounded-lg shadow-2xl p-5 flex sm:flex-col items-center justify-between sm:items-stretch sm:flex-none">
                   <div>
-                     <h2 className="text-2xl mb-2">Add dates for prices</h2>
+                     <h2 className="text-lg md:text-2xl mb-2">
+                        Add dates for prices
+                     </h2>
                      <p className="sm:hidden text-xs font-semibold flex items-center gap-1">
                         <FaStar size={8} /> 4.89
                      </p>
@@ -178,7 +237,7 @@ const DetailsHeader = () => {
                      </div>
                   </div>
 
-                  <button className="sm:w-full text-lg text-white text-center font-semibold px-6 py-3 bg-gradient-to-r from-[#FF385C] to-pink-700 rounded-full">
+                  <button className="sm:w-full md:text-lg text-white text-center font-semibold  px-4 md:px-6 py-1.5 md:py-3 bg-gradient-to-r from-[#FF385C] to-pink-700 rounded-full">
                      Check Availability
                   </button>
                </div>

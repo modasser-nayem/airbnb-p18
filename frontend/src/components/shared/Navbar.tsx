@@ -3,11 +3,13 @@ import logo from "../../assets/airbnb_Logo.png";
 import { RiGlobalLine } from "react-icons/ri";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { IoHome } from "react-icons/io5";
-import { MdOutlineSettingsSuggest } from "react-icons/md";
+import { MdClose, MdOutlineSettingsSuggest } from "react-icons/md";
 import { FcIdea } from "react-icons/fc";
+import { useState } from "react";
 
 const Navbar = () => {
    const location = useLocation();
+   const [openNav, setOpenNav] = useState(false);
 
    const navItem = [
       {
@@ -40,7 +42,7 @@ const Navbar = () => {
                      airbnb
                   </h3>
                </div>
-               <div className="flex items-center gap-8">
+               <div className="hidden md:flex items-center gap-8">
                   {navItem.map((item, i) => (
                      <Link
                         key={i}
@@ -60,11 +62,40 @@ const Navbar = () => {
                   <button className="bg-gray-200 p-2.5 rounded-full">
                      <RiGlobalLine size={20} />
                   </button>
-                  <button className="bg-gray-200 p-2.5 rounded-full">
+                  <button
+                     onClick={() => setOpenNav(!openNav)}
+                     className="md:hidden bg-gray-200 p-2.5 rounded-full"
+                  >
+                     {openNav ? (
+                        <MdClose size={16} />
+                     ) : (
+                        <HiMiniBars3 size={16} />
+                     )}
+                  </button>
+                  <button className="hidden md:block bg-gray-200 p-2.5 rounded-full">
                      <HiMiniBars3 size={16} />
                   </button>
                </div>
             </div>
+
+            {/* responsive nav item */}
+            {openNav && (
+               <div className="mt-5 flex flex-col items-center gap-5 border border-gray-300 p-2">
+                  {navItem.map((item, i) => (
+                     <Link
+                        key={i}
+                        to={item.href}
+                        onClick={() => setOpenNav(!openNav)}
+                        className={`font-semibold py-2.5 px-1 flex items-center gap-2 border-gray-600 ${
+                           location.pathname === item.href ? "border-b-4" : ""
+                        }`}
+                     >
+                        {item.element} {item.name}
+                     </Link>
+                  ))}
+               </div>
+            )}
+
             {/* filter section */}
             <div></div>
          </div>
